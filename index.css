@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;0,700;0,800;0,900;1,700&display=swap");
+
+.font-mont {
+  font-family: Montserrat;
+}
+
+.font-roboto {
+  font-family: Roboto;
+}
+
+:root {
+  --bg-primary: #95c11e;
+  --radial-gradient: radial-gradient(at left bottom, #b0e523, #109f3a);
+}
+
+.radiant-color {
+  background: radial-gradient(at left bottom, #acda2d, #109f3a);
+}
+
+.bg-light-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.green-selection::selection {
+  background-color: white;
+  color: var(--bg-primary);
+}
+
+.h1-primary {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: white;
+  position: relative;
+  line-height: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  white-space: normal;
+}
+
+.h1-primary::before {
+  content: "Eat. Drink. Play.";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: -8;
+  color: black;
+  -webkit-text-stroke: 2px var(--bg-primary);
+}
+
+.h2-primary {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.9rem;
+  color: white;
+}
+
+.h3-primary {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.h4-primary {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+.para-primary {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.btn-primary {
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 2px solid var(--bg-primary);
+  background-color: rgba(0, 0, 0, 0.7);
+  backface-visibility: visible;
+  padding: 0.8rem 2.6rem;
+  border-radius: 40px;
+  transition: box-shadow 0.5s ease-in-out;
+
+  color: white;
+}
+
+.btn-primary:hover {
+  box-shadow: inset 0 -50px var(--bg-primary);
+}
+
+#cursor {
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--bg-primary);
+  position: fixed;
+  z-index: 20;
+  border-radius: 100%;
+  box-shadow: 0 0 140px 50px var(--bg-primary);
+}
+
+.btn-primary:hover + .cursor {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid white;
+  background-color: transparent;
+  position: fixed;
+  border-radius: 100%;
+}
+
+.tilt:hover {
+  transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.special-heading {
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+.scroller {
+  color: black;
+  -webkit-text-stroke: 2px white;
+  overflow-x: scroll;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller .scroller-in {
+  white-space: nowrap;
+  animation-name: scroll-content;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.scroller h1 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-left: 3rem;
+}
+
+.scroller h1:hover {
+  color: var(--bg-primary);
+  -webkit-text-stroke: 0;
+}
+
+@keyframes scroll-content {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.about-card {
+  height: 550px;
+  width: 370px;
+  border-radius: 10px;
+  position: relative;
+  transition: all ease 0.6s;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.about-card:first-child {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-card:nth-child(2) {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  /* background:url('https://eiwgew27fhz.exactdn.com/wp-content/uploads…sons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-card:last-child {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-card:first-child:hover {
+  background: none;
+  background-color: var(--bg-primary);
+}
+.about-card:nth-child(2):hover {
+  background: none;
+  background-color: var(--bg-primary);
+}
+.about-card:last-child:hover {
+  background: none;
+  background-color: var(--bg-primary);
+}
+.about-card span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.sdc-green-content {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--radial-gradient);
+}
+
+.sec-7-card {
+  padding: 3.5rem 4.5rem;
+  color: black;
+  text-align: center;
+  background-color: var(--bg-primary);
+  border-radius: 20px;
+  transition: all 0.6s;
+}
+
+.sec-7-card:first-child:hover {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sec-7-card:nth-child(2):hover {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sec-7-card:last-child:hover {
+  background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .scroller h1 {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-left: 1rem;
+  }
+
+  .about-card {
+    height: 300px;
+    width: 70%;
+    border-radius: 10px;
+    position: relative;
+    transition: all ease 0.6s;
+    color: white;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .sec-7-card {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .sec-7-card:first-child {
+    background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sec-7-card:nth-child(2) {
+    background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sec-7-card:last-child {
+    background: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 70%;
+  }
+  .h1-primary {
+    word-wrap: break-word;
+  }
+
+  .about-card {
+    height: 350px;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .sdc-green-content {
+    height: 25vh;
+  }
+  .h1-primary{
+    line-height: 5rem;
+  }
+}
